@@ -1,0 +1,564 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&family=Manrope:wght@200..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* Reset */
+body, ul, li, a, button {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #FEFEFE;
+    color: #fff;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    z-index: 999;
+    left: 0;
+    top: 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 100px;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu-items {
+    display: flex;
+    gap: 15px;
+}
+
+.menu-items li {
+    display: inline;
+}
+
+.menu-items a {
+    color: #231F40;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    transition: all 0.3s;
+}
+
+.menu-items a:hover {
+    color: #ff7c08;
+}
+.active_menu{
+    color: #ff7c08 !important;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    background: #231F40;
+    border-radius: 2px;
+    width: 100%;
+}
+.home_banner{
+    width: 100%;
+    position: relative;
+}
+video{
+    width: 100%;
+    display: block;
+}
+.banner_mark{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.6);
+}
+.mark_text{
+    width:90%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+.mark_title{
+    font-size: 5vw;
+    font-family: "Anton SC", sans-serif;
+    font-weight: bold;
+    color: white;
+    /*margin-bottom: 20px;*/
+}
+.mark_des{
+    font-family: "Manrope", sans-serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+.home_con{
+    width: 100%;
+    background: white;
+    padding: 6vw 0;
+}
+.title{
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 35px;
+    text-align: center;
+    color: #231f40;
+    font-weight: bold;
+}
+.home_img{
+    max-width: 1330px;
+    width: 95%;
+    margin: auto;
+}
+.home_img_des{
+    line-height: 150%;
+    font-family: "Manrope", sans-serif;
+    font-size: 18px;
+    margin-top: 20px;
+}
+.home_img_list{
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+}
+.home_img_list>div{
+    flex: 1;
+    transition: all 0.6s;
+    height: 800px;
+    position: relative;
+}
+.home_img1{
+    background: url("https://annl.neocities.org/img1.png") no-repeat center;
+    background-size: revert;
+}
+.home_img2{
+    background: url("https://annl.neocities.org/img2.png") no-repeat center;
+    background-size: revert;
+}
+.home_img3{
+    background: url("https://annl.neocities.org/img3.png") no-repeat center;
+    background-size: revert;
+}
+.home_img4{
+    background: url("https://annl.neocities.org/img4.png") no-repeat center;
+    background-size: revert;
+}
+
+.home_img5{
+    background: url("https://annl.neocities.org/img23.jpg") no-repeat center;
+    background-size: revert;
+}
+.home_img6{
+    background: url("https://annl.neocities.org/img24.jpg") no-repeat center;
+    background-size: revert;
+}
+.home_img7{
+    background: url("https://annl.neocities.org/img25.jpg") no-repeat center;
+    background-size: revert;
+}
+.home_img8{
+    background: url("https://annl.neocities.org/img26.jpg") no-repeat center;
+    background-size: revert;
+}
+/*.home_img5{*/
+/*    background: url("https://annl.neocities.org/img5.png") no-repeat center;*/
+/*    background-size: cover;*/
+/*}*/
+/*.home_img6{*/
+/*    background: url("https://annl.neocities.org/img6.png") no-repeat center;*/
+/*    background-size: cover;*/
+/*}*/
+.home_img_list>div:hover{
+    flex: 3;
+}
+.img_list_mark{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(255,255,255,0.7);
+    opacity: 0;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #231F40;
+    font-size: 24px;
+    font-family: "Bebas Neue", sans-serif;
+}
+.home_img_list>div:hover .img_list_mark{
+    opacity: 1;
+}
+footer{
+    width: 100%;
+    background: #231F40;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-family: "Manrope", sans-serif;
+}
+.about_banner{
+    width: 100%;
+    height: 80vh;
+    background: url("https://annl.neocities.org/img7.jpg") no-repeat center;
+    background-size: 100%;
+    animation: banner 6s infinite ease;
+    position: relative;
+}
+.about_con{
+    width: 95%;
+    max-width: 1330px;
+    margin: 20px auto 0 auto;
+}
+.about_list{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    grid-gap: 20px;
+}
+.about_list>div{
+    position: relative;
+    overflow: hidden;
+}
+.about_mark{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: -100%;
+    transition: all 0.3s;
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: "Manrope", sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+.about_list>div:hover .about_mark{
+    bottom: 0;
+}
+.about_list img{
+    height: 100%;
+    object-fit: cover;
+}
+.about_des{
+    line-height: 150%;
+    font-family: "Manrope", sans-serif;
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+@keyframes banner {
+    0%{
+        background-size: 100%;
+    }
+    50%{
+        background-size: 120%;
+    }
+    100%{
+        background-size: 100%;
+    }
+}
+.about_con{
+
+}
+.festival_banner{
+    width: 100%;
+    position: relative;
+}
+table{
+    width: 100%;
+    border: 1px solid #231F40;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+tr,td{
+    border: 1px solid #231F40;
+    text-align: center;
+    padding: 20px 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: #231F40;
+    font-size: 24px;
+    font-family: "Bebas Neue", sans-serif;
+
+}
+td:hover{
+    background: #ff7c08;
+    color: white;
+}
+.active_td{
+    background: #ff7c08;
+    color: white;
+}
+.festival_des_img{
+    max-width: 600px;
+    margin: auto;
+    width: 95%;
+}
+.festival_des{
+    margin-top: 20px;
+}
+.festival_des_text{
+    color: #231F40;
+    font-size: 18px;
+    font-family: "Manrope", sans-serif;
+    max-width: 800px;
+    width: 95%;
+    margin: 20px auto 0 auto;
+}
+.food_con{
+    width: 95%;
+    margin: 20px auto 0 auto;
+    max-width: 1330px;
+
+}
+.food_list{
+    width: 1300px;
+    height: 900px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    margin: auto;
+}
+.d1{
+    background: url("https://annl.neocities.org/img13.jpg") no-repeat center;
+    background-size: cover;
+}
+.d2{
+    background: url("https://annl.neocities.org/img14.jpg") no-repeat center;
+    background-size: cover;
+}
+.d3{
+    background: url("https://annl.neocities.org/img18.jpg") no-repeat center;
+    background-size: cover;
+}
+.d4{
+    background: url("https://annl.neocities.org/img19.jpg") no-repeat center;
+    background-size: cover;
+}
+.d6{
+    background: url("https://annl.neocities.org/img20.jpg") no-repeat center;
+    background-size: cover;
+}
+.d7{
+    background: url("https://annl.neocities.org/img21.jpg") no-repeat center;
+    background-size: cover;
+}
+.d8{
+    background: url("https://annl.neocities.org/img22.jpg") no-repeat center;
+    background-size: cover;
+}
+.d9{
+    background: url("https://annl.neocities.org/img15.jpg") no-repeat center;
+    background-size: cover;
+}
+.d5{
+
+    background: url("https://annl.neocities.org/img23.jpg") no-repeat center;
+    background-size: cover;
+}
+.d10{
+    background: url("https://annl.neocities.org/img25.jpg") no-repeat center;
+    background-size: cover;
+}
+.d11{
+    background: url("https://annl.neocities.org/img26.jpg") no-repeat center;
+    background-size: cover;
+}
+.d12{
+    background: url("https://annl.neocities.org/img22.jpeg") no-repeat center;
+    background-size: cover;
+}
+.d13{
+    background: url("https://annl.neocities.org/img16.jpg") no-repeat center;
+    background-size: cover;
+}
+.d14{
+    background: url("https://annl.neocities.org/img23.jpeg") no-repeat center;
+    background-size: cover;
+}
+.d15{
+    background: url("https://annl.neocities.org/img24.jpeg") no-repeat center;
+    background-size: cover;
+}
+.d16{
+    background: url("https://annl.neocities.org/img25.jpeg") no-repeat center;
+    background-size: cover;
+}
+.d17{
+    background: url("https://annl.neocities.org/img43.jpg") no-repeat center;
+    background-size: cover;
+}
+.d18{
+    background: url("https://annl.neocities.org/img44.jpg") no-repeat center;
+    background-size: cover;
+}
+.d19{
+    background: url("https://annl.neocities.org/img3.png") no-repeat center;
+    background-size: cover;
+}
+.d20{
+    background: url("https://annl.neocities.org/img45.jpg") no-repeat center;
+    background-size: cover;
+}
+.food_btn{
+    width: 150px;
+    position: relative;
+    margin: 20px auto;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    background: #ff7c08;
+    color: #231F40;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: "Bebas Neue", sans-serif;
+    transition: all 0.3s;
+}
+.food_btn:hover{
+    background: #eee;
+}
+.food_active{
+    opacity: 0.5;
+}
+.food_text{
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+    color: #231F40;
+    font-family: "Manrope", sans-serif;
+}
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 88px;
+        right: 0;
+        background-color: #FEFEFE;
+        /*border-radius: 8px;*/
+        overflow: hidden;
+        width: 100%;
+        z-index: 999;
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    .menu-items {
+        flex-direction: column;
+    }
+
+    .menu-items li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu-items a {
+        color: #231F40;
+        text-decoration: none;
+        border-radius: 5px;
+        font-family: "Manrope", sans-serif;
+        font-size: 20px;
+        transition: all 0.3s;
+        width: 100%;
+        display: block;
+        padding: 10px 0;
+    }
+    .menu-items a:hover{
+        background: #ff7c08;
+        color: white;
+    }
+    .home_img_list{
+        width: 100%;
+        display: block;
+        margin-top: 20px;
+    }
+    .home_img_list>div{
+        flex: 1;
+        transition: all 0.6s;
+        height: 400px;
+        position: relative;
+    }
+    .mark_des{
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+    .mark_title{
+        font-size: 30px;
+    }
+    .about_list{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .about_banner{
+        height: 40vh;
+    }
+    tr,td{
+        font-size: 18px;
+    }
+    .festival_des_text{
+        font-size: 16px;
+    }
+    .food_list{
+        width: 95vw;
+        height: 95vw;
+    }
+}
